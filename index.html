@@ -21,7 +21,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 400px;
+            max-width: 600px; /* 加寬容器以適應圖片 */
         }
         h1 {
             text-align: center;
@@ -67,8 +67,22 @@
             background-color: #ffebee;
             color: #c62828;
         }
-        #fileInput {
-            display: none;
+        .seating-image {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .seating-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        /* 圖片說明文字 */
+        .image-caption {
+            text-align: center;
+            color: #666;
+            margin-top: 10px;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -80,6 +94,12 @@
         </div>
         <button onclick="searchTable()">查詢座位</button>
         <div id="result"></div>
+        
+        <!-- 座位圖區域 -->
+        <div class="seating-image">
+            <img src="seating-plan.jpg" alt="座位分布圖" />
+            <div class="image-caption">座位分布圖</div>
+        </div>
     </div>
 
     <script>
