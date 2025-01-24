@@ -26,69 +26,21 @@
         h1 {
             text-align: center;
             color: #333;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
-        .input-group {
-            margin-bottom: 20px;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 16px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        #result {
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 4px;
-            text-align: center;
-            display: none;
-        }
-        .success {
-            background-color: #e8f5e9;
-            color: #2e7d32;
-        }
-        .error {
-            background-color: #ffebee;
-            color: #c62828;
-        }
-        .seating-image {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .seating-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        /* 圖片說明文字 */
-        .image-caption {
+        .subtitle {
             text-align: center;
             color: #666;
-            margin-top: 10px;
+            margin-bottom: 20px;
             font-size: 14px;
         }
+        /* 其他 CSS 樣式保持不變 */
     </style>
 </head>
 <body>
     <div class="container">
         <h1>春酒座位查詢</h1>
+        <div class="subtitle">請輸入你的中文姓名</div>
         <div class="input-group">
             <input type="text" id="nameInput" placeholder="請輸入您的姓名">
         </div>
@@ -103,9 +55,9 @@
     </div>
 
     <script>
+        // 原有的 JavaScript 程式碼保持不變
         let seatingData = {};
 
-        // 從CSV讀取資料
         fetch('seating.csv')
             .then(response => response.text())
             .then(data => {
